@@ -96,7 +96,7 @@ export function VeracityScoreGauge({ analysis }: VeracityScoreGaugeProps) {
         <div className="p-2 rounded-lg bg-orange-500/10">
           <Shield className="w-5 h-5 text-orange-400" />
         </div>
-        <h3 className="text-lg font-semibold text-slate-100">SachAI Trust Analysis</h3>
+        <h3 className="text-lg font-semibold text-slate-100">ForAmaze Trust Analysis</h3>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

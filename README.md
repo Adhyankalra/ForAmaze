@@ -1,6 +1,6 @@
-# SachAI — AI Hallucination Detector
+# ForAmaze — AI Hallucination Detector
 
-SachAI is a forensic tool that detects hallucinations in AI-generated responses by comparing them against a ground-truth source document. It breaks the response into atomic claims, runs NLI-based cross-examination against the source, and produces a per-claim verdict with a composite risk score.
+ForAmaze is a forensic tool that detects hallucinations in AI-generated responses by comparing them against a ground-truth source document. It breaks the response into atomic claims, runs NLI-based cross-examination against the source, and produces a per-claim verdict with a composite risk score.
 
 ---
 
@@ -37,7 +37,7 @@ SachAI is a forensic tool that detects hallucinations in AI-generated responses 
 ## Project Structure
 
 ```
-sachai/
+foramaze/
 ├── backend/
 │   ├── app.py              # Original Flask API (port 5000)
 │   ├── hallucinator.py     # Production service with /health & /intercept endpoints (port 5001)

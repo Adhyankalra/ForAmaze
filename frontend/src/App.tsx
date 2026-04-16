@@ -143,7 +143,7 @@ function App() {
             <div className="p-2 rounded-lg bg-orange-500/10">
               <Zap className="w-5 h-5 text-orange-400" />
             </div>
-            <h2 className="text-xl font-semibold text-slate-100">How SachAI Works</h2>
+            <h2 className="text-xl font-semibold text-slate-100">How ForAmaze Works</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -177,7 +177,7 @@ function App() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
-              <span className="text-sm text-slate-400">SachAI Forensic Engine v1.0</span>
+              <span className="text-sm text-slate-400">ForAmaze Forensic Engine v1.0</span>
             </div>
             <div className="flex items-center gap-6 text-sm text-slate-500">
               <span>Built for Hackathon 2025</span>

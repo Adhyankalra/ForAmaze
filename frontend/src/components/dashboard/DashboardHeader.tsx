@@ -25,7 +25,7 @@ export function DashboardHeader() {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h1 className="text-2xl font-bold text-white">Foramaze</h1>
+                <h1 className="text-2xl font-bold text-white">ForAmaze</h1>
                 <span className="px-2 py-0.5 text-xs font-medium bg-orange-500/20 text-orange-400 rounded-full border border-orange-500/30">
                   BETA
                 </span>
@@ -42,7 +42,7 @@ export function DashboardHeader() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Sparkles className="w-4 h-4 text-amber-400" />
-            <span className="text-sm italic">"Sach means Truth. We are the Truth-Layer for the AI era."</span>
+            <span className="text-sm italic">"ForAmaze — The Truth-Layer for the AI era."</span>
           </motion.div>
           
           {/* Actions */}
