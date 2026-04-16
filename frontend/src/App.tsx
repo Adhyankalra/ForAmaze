@@ -180,7 +180,7 @@ function App() {
               <span className="text-sm text-slate-400">ForAmaze Forensic Engine v1.0</span>
             </div>
             <div className="flex items-center gap-6 text-sm text-slate-500">
-              <span>Built for Hackathon 2025</span>
+              <span>Built for Hackathon 2026</span>
               <span>•</span>
               <span>Powered by cross-encoder/nli-deberta-v3-small</span>
               <span>•</span>
