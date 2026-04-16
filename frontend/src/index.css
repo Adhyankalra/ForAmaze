@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ── Warm, Furious Volcano Palette ─────────────────────────────── */
+    --background: 15 20% 5%;            /* volcanic near-black            */
+    --foreground: 30 60% 95%;           /* warm cream white               */
+    --card: 15 22% 7%;                  /* scorched dark                  */
+    --card-foreground: 30 60% 95%;
+    --popover: 15 22% 7%;
+    --popover-foreground: 30 60% 95%;
+    --primary: 22 100% 52%;             /* fierce orange flame             */
+    --primary-foreground: 15 20% 5%;
+    --secondary: 15 25% 13%;           /* warm charcoal                   */
+    --secondary-foreground: 30 60% 95%;
+    --muted: 15 25% 13%;
+    --muted-foreground: 25 30% 58%;     /* warm mid-tone                   */
+    --accent: 22 100% 52%;
+    --accent-foreground: 15 20% 5%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 30 60% 95%;
+    --border: 15 25% 13%;
+    --input: 15 25% 13%;
+    --ring: 22 100% 52%;
+    --radius: 0.5rem;
+
+    /* ── Semantic Signal Colors ────────────────────────────────────── */
+    --truth: 22 100% 52%;               /* orange = faithful/truth         */
+    --hallucination: 0 84% 60%;        /* red = hallucination             */
+    --warning: 38 92% 50%;             /* amber = warning                 */
+    --info: 200 80% 55%;               /* cool-blue = info (kept neutral) */
+    --risk: 0 72% 51%;                 /* red = risk                      */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  code, pre, .mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  /* Gradient text: orange → amber */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #f97316, #fbbf24);
+  }
+  
+  /* Glass panel — warmed to match new bg */
+  .glass-panel {
+    background: hsl(15 22% 8% / 0.85);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(15 30% 18% / 0.6);
+  }
+  
+  .glow-emerald {
+    box-shadow: 0 0 20px -5px hsl(var(--truth) / 0.45);
+  }
+  
+  .glow-rose {
+    box-shadow: 0 0 20px -5px hsl(var(--hallucination) / 0.4);
+  }
+  
+  .scanline {
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      hsl(var(--primary) / 0.04) 50%,
+      transparent 100%
+    );
+    animation: scanline 8s linear infinite;
+  }
+  
+  @keyframes scanline {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100vh); }
+  }
+  
+  .pulse-truth {
+    animation: pulse-truth 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-truth {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+  
+  /* Warm grid pattern */
+  .grid-pattern {
+    background-image: 
+      linear-gradient(hsl(22 100% 60% / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(22 100% 60% / 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+/* Custom scrollbar — warm tones */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(15 22% 7%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(15 30% 22%);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(22 60% 35%);
+}
